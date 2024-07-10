@@ -51,9 +51,9 @@ export const SearchBooksPage = () => {
                     category: responseData[key].category,
                     img: responseData[key].img,
                 });
-                setBooks(loadedBooks);
-                setIsLoading(false);
             }
+            setBooks(loadedBooks);
+            setIsLoading(false);
         };
         fetchBooks().catch((error: any) => {
             setIsLoading(false);
